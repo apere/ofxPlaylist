@@ -233,6 +233,7 @@ namespace Playlist{
 class ofxPlaylist {
 public:
 	typedef vector<shared_ptr<ofxBaseKeyframe > > Keyframe;
+	int duration;
 	
 	ofxPlaylist()
 	:anim_idle(TRUE)
@@ -273,7 +274,7 @@ public:
 	// MARK: Private methods
 private:
 	bool anim_idle;              // whether the current ofxPlaylist is animating
-	int duration;
+	
 
 	ofMutex playlistMutex;
 	deque<shared_ptr<Keyframe> > playlist;
